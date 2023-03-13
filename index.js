@@ -82,7 +82,7 @@ const msgNoEnradas = {
       sgMail
         .send(msg)
         .then(() => {
-          console.log("Email sent");
+          console.log("Email sent!!!");
         })
         .catch((error) => {
           console.error(error);
@@ -92,19 +92,6 @@ const msgNoEnradas = {
     }
   } else {
     console.log("No salieron a la venta aun...");
-    try {
-      //send mail
-      sgMail
-        .send(msgNoEnradas)
-        .then(() => {
-          console.log("Email sent");
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    } catch (error) {
-      console.error(error);
-    }
   }
 
   // Close the browser
