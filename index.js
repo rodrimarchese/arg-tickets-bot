@@ -5,6 +5,7 @@ const puppeteer = require("puppeteer");
 const sgMail = require("@sendgrid/mail");
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+console.log("api key:", process.env.SENDGRID_API_KEY);
 
 const msg = {
   to: [
