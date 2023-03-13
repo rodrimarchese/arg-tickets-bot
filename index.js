@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // using Twilio SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
 
@@ -17,7 +18,7 @@ const msg = {
   from: "rodrimarchese@hotmail.com", // Change to your verified sender
   subject: "VENTA ENTRADAS SELECCION",
   text: "Posiblemente hay enradas!!",
-  html: "<strong>Entra a comprar entradas!!</strong>",
+  html: "<strong>Entra a comprar entradas!!</strong> <br> <a href='https://www.deportick.com/'>Deportick</a>",
 };
 
 const msgNoEnradas = {
