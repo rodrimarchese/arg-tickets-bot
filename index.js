@@ -77,26 +77,34 @@ const msgNoEnradas = {
     "https://cdn.getcrowder.com/images/1678371987163-null-Banner_Exhibicion_en_Deportick.jpg";
 
   if (href !== previousHref || src !== previousSrc) {
-    //send mail
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log("Email sent");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    try {
+      //send mail
+      sgMail
+        .send(msg)
+        .then(() => {
+          console.log("Email sent");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } catch (error) {
+      console.error(error);
+    }
   } else {
     console.log("No salieron a la venta aun...");
-    //send mail
-    sgMail
-      .send(msgNoEnradas)
-      .then(() => {
-        console.log("Email sent");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    try {
+      //send mail
+      sgMail
+        .send(msgNoEnradas)
+        .then(() => {
+          console.log("Email sent");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   // Close the browser
