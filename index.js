@@ -11,6 +11,7 @@ const msg = {
     "camilacairo97@gmail.com",
     "rodrimarchese@gmail.com",
     "Cuervo.irigoyen@gmail.com",
+    "nicomarchese2003@gmail.com",
   ], // Change to your recipient
   from: "rodrimarchese@hotmail.com", // Change to your verified sender
   subject: "VENTA ENTRADAS SELECCION",
@@ -23,6 +24,7 @@ const msgNoEnradas = {
     "camilacairo97@gmail.com",
     "rodrimarchese@gmail.com",
     "Cuervo.irigoyen@gmail.com",
+    "nicomarchese2003@gmail.com",
   ], // Change to your recipient
   from: "rodrimarchese@hotmail.com", // Change to your verified sender
   subject: "No cambio nada en la pagina",
@@ -33,7 +35,7 @@ const msgNoEnradas = {
 (async () => {
   // Launch Puppeteer in chromium and navigate to the page
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     defaultViewport: null,
     args: ["--start-maximized"],
   });
